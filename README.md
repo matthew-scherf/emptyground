@@ -18,15 +18,6 @@ From this single engine, the formal core derives:
 
 The philosophical system reads these results as a metaphysics: one impersonal, contentless ground (identity-as-such); a manifest world that is real but groundlessly arisen; every particular thing a faithful trace of the ground wrapped in lossy, contingent form; no thing with own-being; and at the centre a silence the whole structure proves it cannot cross.
 
-## Repository structure
-
-```
-egm.lean                           Lean 4 proof development (all proofs machine-checked)
-empty_ground_monism_outline.md     The full system in outline form, 32 theses with D/I marked
-form_of_complete_self_knowledge.svg  Diagram: the three forms compared (representational, Yoneda, identity)
-web/                               Next.js website
-```
-
 ## The formal core (`egm.lean`)
 
 Nine namespaces, nine sections of the argument:
