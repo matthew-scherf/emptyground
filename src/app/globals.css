@@ -1,0 +1,104 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* EGM palette, sourced from the SVG diagram */
+  --color-ground-50:  #f5f3ff;
+  --color-ground-100: #ede9fe;
+  --color-ground-200: #eeedfe;
+  --color-ground-500: #534eb7;
+  --color-ground-700: #3c3489;
+  --color-ground-900: #1e1a5e;
+
+  --color-yes-50:  #f0fdf9;
+  --color-yes-100: #e1f5ee;
+  --color-yes-600: #0f6e56;
+  --color-yes-800: #085041;
+
+  --color-no-50:  #fef2ee;
+  --color-no-100: #faece7;
+  --color-no-600: #991e1d;
+  --color-no-800: #712b13;
+
+  /* D/I/posit semantic tokens */
+  --color-D-bg:     #eff6ff;
+  --color-D-border: #3b82f6;
+  --color-D-text:   #1e40af;
+
+  --color-I-bg:     #fffbeb;
+  --color-I-border: #f59e0b;
+  --color-I-text:   #92400e;
+
+  --color-posit-bg:     #f5f3ff;
+  --color-posit-border: #7c3aed;
+  --color-posit-text:   #4c1d95;
+
+  /* Surface / text */
+  --color-surface:       #fafaf8;
+  --color-surface-alt:   #f4f3ef;
+  --color-border:        color(srgb 0.043 0.043 0.043 / 0.12);
+  --color-text-primary:  #1a1a18;
+  --color-text-secondary:#52514e;
+  --color-text-faint:    #8a8880;
+
+  /* Typography */
+  --font-serif: "Lora", Georgia, "Times New Roman", serif;
+  --font-sans:  var(--font-geist-sans);
+  --font-mono:  var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-surface:       #111110;
+    --color-surface-alt:   #1c1b19;
+    --color-text-primary:  #e8e6e1;
+    --color-text-secondary:#a09e99;
+    --color-text-faint:    #6b6965;
+    --color-border:        color(srgb 0.9 0.9 0.9 / 0.1);
+    --color-D-bg:     #1e2a3d;
+    --color-D-border: #3b82f6;
+    --color-D-text:   #93c5fd;
+    --color-I-bg:     #2d2010;
+    --color-I-border: #f59e0b;
+    --color-I-text:   #fde68a;
+    --color-posit-bg:     #1e1430;
+    --color-posit-border: #a78bfa;
+    --color-posit-text:   #ddd6fe;
+  }
+}
+
+html {
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* Prose serif override for reading sections */
+.prose-serif {
+  font-family: var(--font-serif);
+}
+
+/* KaTeX display math */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem 0;
+}
+
+/* Lean code blocks */
+.lean-block {
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-ground-500);
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  line-height: 1.6;
+  overflow-x: auto;
+  padding: 1rem 1.25rem;
+  tab-size: 2;
+}

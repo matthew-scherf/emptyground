@@ -1,68 +1,36 @@
-# Empty-Ground Monism
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-[![DOI](https://zenodo.org/badge/1283598624.svg)](https://doi.org/10.5281/zenodo.21021006)
+## Getting Started
 
-[emptyground.com](https://emptyground.com)
+First, run the development server:
 
-A complete metaphysics on a formal foundation. The central result is that no system can completely represent itself without contradiction. This is machine-checked in Lean 4. Every philosophical claim in the system is marked either **(D) demonstrated** (following from the formal core) or **(I) interpreted** (a reading laid over the mathematics). The seam between them is load-bearing and never elided.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## The argument in brief
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-The whole system descends from one theorem: **self-application together with negation has no fixed point** (Lawvere's fixed-point theorem, applied to `Not`). Cantor, Russell, the liar, Tarski, and Gödel are all this one fact under different inputs.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-From this single engine, the formal core derives:
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-- No encoding of a carrier into its own predicate-space can be point-surjective (the catalogue cannot close)
-- No coherent subject-predicate split exists (Tarski's undefinability, constructively)
-- The gap between a carrier and its predicate-power is two-sided: no surjection and no injection
-- Identity is the universal separator: every distinction reduces to a distinction of identity
-- A complete and faithful self-account forces its codomain to be the carrier itself — the non-dual form
-- Identity's image in predicate-space is faithful but never complete (the Yoneda floor and ceiling)
-- The non-split form is inhabited; the split form is not
+## Learn More
 
-The philosophical system reads these results as a metaphysics: one impersonal, contentless ground (identity-as-such); a manifest world that is real but groundlessly arisen; every particular thing a faithful trace of the ground wrapped in lossy, contingent form; no thing with own-being; and at the centre a silence the whole structure proves it cannot cross.
+To learn more about Next.js, take a look at the following resources:
 
-## The formal core (`egm.lean`)
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Nine namespaces, nine sections of the argument:
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-| Namespace | Content |
-|---|---|
-| `Diagonal` | Lawvere's theorem; the engine |
-| `Closure` | No encoding internalises all predicates; Tarski's theorem |
-| `Gap` | The gap is two-sided: no surjection, no injection |
-| `Distinction` | Identity is the universal separator |
-| `Identification` | A lossless self-map erases distinction |
-| `SelfAccount` | Complete + faithful forces the non-dual form |
-| `Yoneda` | Identity's image: faithful (floor), never complete (ceiling) |
-| `Whole` | The non-split form is inhabited; the split form is empty |
-| `self_knowledge_is_non_dual` | Capstone theorem unifying all four results |
+## Deploy on Vercel
 
-Proofs can be run in the browser at [live.lean-lang.org](https://live.lean-lang.org) without installing anything.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## The D/I convention
-
-Every claim is marked:
-
-- **(D)** — demonstrated. Follows from the formal core. A reader must accept it or name the exact line of the Lean proof they reject.
-- **(I)** — interpreted. A reading laid over the mathematics; offered as the most rational available interpretation, never as proven.
-- **(D+I)** — a demonstrated foundation with an interpreted extension; the seam between them is marked.
-- **posit** — an explicitly underived axiom, declared openly.
-
-The system has exactly two posits: that the ground is luminous (aware, in the sense of pure knowing-as-being), and that this particular world rather than another is the brute fact the system begins from.
-
-
-## Traditional parallels
-
-The system draws on and diverges from several traditions. All borrowings are explicit, with divergence notes:
-
-- **Madhyamaka Buddhism**: śūnyatā (emptiness of own-being) is the closest parallel to the no-svabhāva result, established here by diagonal proof rather than prasaṅga
-- **Advaita Vedanta**: nirguna Brahman points toward the ground, but the ground here is not Being or Consciousness as established attributes; chit (luminosity) is a posit, not a result
-- **Taoism**: the unnamed Tao and ziran (self-so arising) map onto the apophatic ground and groundless arising, with the cosmogonic role explicitly rejected
-- **Buddhist anattā**: the impersonal ground is the formal warrant for no-self, derived rather than asserted
-
-Two terms are coined where no existing vocabulary is accurate without misimporting background commitments: **trace-image** (the Yoneda image of an element, its lossless presence in predicate-space) and **contingent form** (the lossy excess, a thing's determinate character).
-
-## Licence
-
-The Lean proofs and philosophical text are the author's original work.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
