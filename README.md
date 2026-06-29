@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/1283598624.svg)](https://doi.org/10.5281/zenodo.21021006)
 
-[!(https://emptyground.com)]
+[emptyground.com](https://emptyground.com)
 
 A complete metaphysics on a formal foundation. The central result is that no system can completely represent itself without contradiction. This is machine-checked in Lean 4. Every philosophical claim in the system is marked either **(D) demonstrated** (following from the formal core) or **(I) interpreted** (a reading laid over the mathematics). The seam between them is load-bearing and never elided.
 
